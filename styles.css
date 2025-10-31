@@ -1,0 +1,724 @@
+* {
+  font-family: "Rubik", Courier, monospace;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(0, 106, 18) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(0, 106, 18);
+  border-radius: 10px;
+  border: none;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 90, 15);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(245, 245, 245);
+  font-size: 1.5rem;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: white;
+  height: 100px;
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid rgb(0, 106, 18);
+}
+
+.logo_div {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.main_nav {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  padding: 15px;
+}
+
+.main_nav nav {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main_nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+  font-size: 1.3rem;
+}
+
+.main_nav ul a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.main_nav ul a:hover {
+  color: green;
+}
+
+main {
+  padding: 50px;
+}
+
+.home {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgb(0, 106, 18);
+  height: 80vh;
+}
+
+.about {
+  padding: 50px;
+  background-color: white;
+  display: flex;
+  gap: 50px;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+.timeline-section {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  height: 80vh;
+  align-items: center;
+  align-content: center;
+}
+
+.timeline-section h2 {
+  color: rgb(0, 106, 18);
+  margin-bottom: 2.5rem;
+  font-size: 3rem;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: rgb(0, 106, 18);
+  z-index: 1;
+}
+
+.timeline-item {
+  position: relative;
+  text-align: center;
+  flex: 1;
+}
+
+.timeline-date {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: rgb(0, 106, 18);
+  font-weight: bold;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: rgb(0, 106, 18);
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: -5px;
+  z-index: 2;
+}
+
+.timeline-bubble {
+  position: relative;
+  background-color: white;
+  color: #333;
+  padding: 1rem;
+  margin-top: 10px;
+  display: inline-block;
+  max-width: 200px;
+  font-size: 1.2rem;
+  border: 1px solid rgb(0, 106, 18);
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 3;
+}
+
+.timeline-bubble:hover {
+  cursor: pointer;
+  box-shadow: 0 0 10px black;
+}
+
+.timeline-bubble::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent #006a12 transparent;
+}
+
+.timeline-bubble::after {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 7px 7px 7px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+}
+
+.projects {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+}
+
+.projects_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 50px;
+  margin-top: 2rem;
+}
+
+.project {
+  height: 200px;
+  width: 200px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  border-radius: 50px;
+}
+
+.project:hover {
+  box-shadow: 0 0 10px #333;
+  cursor: pointer;
+}
+
+.project img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50px;
+}
+
+.contact {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 100px;
+}
+
+.certificates {
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.certificate_button {
+  border-radius: 50px;
+  color: green;
+  background-color: white;
+  width: 200px;
+}
+
+.certificate_home {
+  text-align: center;
+}
+
+.certificate_grid {
+  display: grid;
+  grid-template-rows: 1, 1fr;
+  gap: 25px;
+}
+
+.certificate_item {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.certificate_item img {
+  width: 50px;
+}
+
+.certificate_page_bottom {
+  justify-content: center;
+  text-align: center;
+}
+
+footer {
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px;
+}
+
+.footer_identity {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer_logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.footer_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer_text h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.social_icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.social_icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.footer_bottom {
+  text-align: center;
+  padding: 10px;
+  font-size: small;
+  color: green;
+}
+
+.sitemap-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2rem 0.5rem;
+  font-size: 1rem;
+  color: white;
+}
+
+.sitemap-table td {
+  text-align: left;
+}
+
+.sitemap-table a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sitemap-table a:hover {
+  color: green;
+}
+
+.Python_Home {
+  text-align: center;
+  justify-content: center;
+}
+
+.Python_Projects {
+  display: flex;
+  grid-template-rows: repeat(5, 1fr);
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  flex-wrap: wrap;
+}
+
+.Python_Project {
+  width: 350px;
+  height: 350px;
+}
+
+.Python_Project_Information {
+  text-align: center;
+}
+
+.Python_Project_Information img {
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.Python_Project_Sentence p {
+  font-size: 1.2rem;
+}
+
+.Website_Home {
+  text-align: center;
+  justify-content: center;
+}
+
+.Website_Projects {
+  display: flex;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: space-between;
+  grid-template-columns: repeat(1, 1fr);
+  flex-wrap: wrap;
+}
+
+.Website_Project {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  padding: 25px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid green;
+}
+
+.Website_Project_Information {
+  width: 50%;
+}
+
+.Website_Project_Name {
+  text-align: center;
+}
+
+.Website_Project_Name p {
+  color: green;
+}
+
+.Website_Project_Name {
+  font-size: 2.5rem;
+}
+
+.Website_Project_Image {
+  align-content: center;
+}
+
+.Website_Project_Image img {
+  border-radius: 50px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+.Go_To_Web_Project {
+  height: 500px;
+  align-content: center;
+}
+.Go_To_Web_Project img {
+  width: 50px;
+  height: 50px;
+}
+
+.slide-in-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-up.show,
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cybersecurity-home {
+  text-align: center;
+}
+
+.cybersecurity-home p {
+  text-align: left;
+}
+
+.cybersecurity-subjects {
+  display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.cybersecurity-topic {
+  height: 350px;
+  width: 350px;
+  text-align: center;
+}
+
+.cybersecurity-topic img {
+  border-radius: 100%;
+  height: 250px;
+  width: 250px;
+}
+
+.cybersecurity-topic img:hover {
+  box-shadow: 0 0 20px black;
+}
+
+.pentesting_projects {
+  display: grid;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pentesting_project {
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid green;
+}
+
+.pentesting_project img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+.pentesting_project_info {
+  width: 900px;
+  font-size: 1.4rem;
+}
+.pentesting_project_heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.server_hardening_main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 90vw;
+}
+
+.server_hardening_main div {
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 10px;
+  width: 45vw;
+}
+
+.server_hardening_main div h2 {
+  text-align: center;
+}
+
+pre {
+  text-align: start;
+  background-color: #f6f8fa;
+  color: #24292e;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  padding: 16px;
+  overflow-x: auto;
+  font-size: 14px;
+  line-height: 1.45;
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Consolas,
+    "Liberation Mono", Menlo, monospace;
+  margin: 1em 0;
+}
+
+code {
+  background: none;
+  color: inherit;
+}
+
+code .keyword {
+  color: #d73a49;
+}
+code .string {
+  color: #032f62;
+}
+code .number {
+  color: #005cc5;
+}
+code .comment {
+  color: green;
+  font-style: italic;
+}
+code .function {
+  color: #6f42c1;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(100px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in-left.show,
+.slide-in-right.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.logo-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.header-name {
+  font-size: 2rem;
+}
+
+.home-text {
+  width: 50%;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-family: "Doto", sans-serif;
+  font-weight: 1500;
+  color: green;
+}
+
+.profile-photo {
+  width: 400px;
+  border-radius: 100%;
+  box-shadow: 0 0 50px grey;
+}
+
+.about-img {
+  width: 550px;
+  border-radius: 10px;
+}
+
+.timeline-note {
+  font-size: 13px;
+}
+
+.sitemap-heading {
+  color: green;
+  font-size: 15px;
+}
+
+.contact-center {
+  align-items: center;
+  text-align: center;
+  align-content: center;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin: 100px;
+}
+
+.contact-icon {
+  width: 50px;
+}
+
+.certificate-title {
+  color: green;
+}
+
+.ctf-section {
+  text-align: center;
+  padding: 50px;
+}
+
+.ctf-heading {
+  font-size: 2.5rem;
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.ctf-text {
+  font-size: 1.3rem;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.cybersecurity-home-top {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.cybersecurity-home-top h1 {
+  color: green;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.cybersecurity-home-top p {
+  line-height: 1.8;
+  font-size: 1.2rem;
+}
