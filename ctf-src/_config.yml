@@ -1,0 +1,7 @@
+title: CTF Writeups
+destination: ../ctf        # Output goes into your main site’s /ctf folder
+baseurl: /ctf              # So links work correctly
+permalink: /ctf/:title/
+markdown: kramdown
+destination: ../ctf
+baseurl: /ctf
