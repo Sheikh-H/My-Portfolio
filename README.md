@@ -54,7 +54,7 @@ To view the project locally:
 ```bash
 git clone https://github.com/Sheikh-H/My-Portfolio.git
 cd My-Portfolio
-
+```
 ---
 
 ## Footnote
